@@ -1,0 +1,60 @@
+# ==========================================================
+# Advanced RAG Lab - Requirements
+# Three notebooks, each with specific dependencies
+# ==========================================================
+
+# ========== CORE FRAMEWORKS (All Notebooks) ==========
+python-dotenv>=1.0.0
+jupyter>=1.0.0
+ipython>=8.18.0
+numpy>=1.24.0
+matplotlib>=3.8.0
+
+# ========== NOTEBOOK 1: Node Postprocessor RAG ==========
+# LlamaIndex core and components
+llama-index>=0.10.0
+llama-index-llms-gemini>=0.1.0
+llama-index-embeddings-huggingface>=0.1.0
+pydantic-ai>=0.1.0
+
+# ========== NOTEBOOK 2: Production-Grade RAG ==========
+# LangChain & LangGraph ecosystem
+langchain>=0.1.0
+langgraph>=0.0.20
+langchain-openai>=0.0.5
+langchain-groq>=0.0.1
+langchain-community>=0.0.10
+
+# LLM Providers
+openai>=1.10.0
+tavily-python>=0.3.0
+
+# Vector Stores & Embeddings
+sentence-transformers>=2.5.1
+faiss-cpu>=1.7.4
+rank-bm25>=0.2.2
+
+# Evaluation
+ragas>=0.1.0
+datasets>=2.14.0
+pandas>=2.1.0
+
+# Document Processing
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+sec-api>=0.1.5
+unstructured[html]>=0.11.0
+PyPDF2>=3.0.1
+
+# Console output
+rich>=13.7.0
+
+# ========== NOTEBOOK 3: Index-Aware & HyDE ==========
+# (Uses same llama-index dependencies as Notebook 1)
+
+# ========== SECURITY & COMPATIBILITY NOTES ==========
+# Some vector stores require:
+# allow_dangerous_deserialization=True for FAISS loading
+
+# For HuggingFace embeddings, you'll need to:
+# Accept the model license at https://huggingface.co/BAAI/bge-small-en-v1.5
